@@ -84,8 +84,8 @@ section {
 }
 
 .vote {
-    background-color: rgb(225, 172, 146, 0.8);
-    border: none;
+    background-color: rgb(225, 172, 146, 0.9);
+    border: 0rem solid rgb(180, 180, 180, 1);
     color: black;
     display: inline-block;
     font-family: 'Calibri';
@@ -94,7 +94,7 @@ section {
     padding: 0rem;
     text-align: center;
     text-decoration: none;
-    transition-duration: 0.3s;
+    transition: all 0.3s ease-in-out;
     width: 1.6rem;
 }
 
@@ -106,11 +106,11 @@ section {
 }
 
 .vote:hover {
-    background-color: rgb(180, 180, 180, 0.7);
+    background-color: rgb(255, 200, 170, 0.9);
 }
 
 #submit {
-    background-color: rgb(225, 172, 146, 0.8);
+    background-color: rgb(225, 172, 146, 0.9);
     border: none;
     color: black;
     display: inline-block;
@@ -120,12 +120,12 @@ section {
     padding: 0rem;
     text-align: center;
     text-decoration: none;
-    transition-duration: 0.3s;
+    transition: all 0.3s ease-in-out;
     width: 10rem;
 }
 
 #submit:hover {
-    background-color: rgb(180, 180, 180, 0.7);
+    background-color: rgb(255, 200, 170, 0.9);
 }
 
 .selector-for-some-widget {
