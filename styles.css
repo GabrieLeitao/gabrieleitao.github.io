@@ -83,7 +83,7 @@ section {
     top: 0
 }
 
-.vote {
+.rate {
     background-color: rgb(225, 172, 146, 0.9);
     border: 0rem solid rgb(180, 180, 180, 1);
     color: black;
@@ -105,7 +105,7 @@ section {
     transition: all 0.3s;
 }
 
-.vote:hover {
+.rate:hover {
     background-color: rgb(255, 200, 170, 0.9);
 }
 
