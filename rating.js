@@ -45,38 +45,11 @@ document.addEventListener("DOMContentLoaded", function(){
         const ratesString = JSON.stringify(rates, null, 2);
 
         // Write the string to a local text file
-        // const filename = 'rates.txt';
-        // const file = new Blob([votesString], {type: 'text/plain'});
-        // const a = document.createElement('a');
-        // a.href = URL.createObjectURL(file);
-        // a.download = filename;
-        // a.click();
-        // Send the votes data to the Google Sheets API using the Fetch API
-        const spreadsheetId = '1wJhrvomWlAzffomaOZtSjhEsEinSHEilEwPv6-QchqU'; // replace with your spreadsheet ID
-        const sheetName = 'Dados'; // replace with the name of your sheet
-        const accessToken = '211301099311-lh66fs24bspsgbouupa3cleume5tjs7t.apps.googleusercontent.com'; // replace with your access token
-        const apiUrl = `https://sheets.googleapis.com/v4/spreadsheets/${spreadsheetId}/values/${sheetName}:append?valueInputOption=RAW`;
-        const requestData = {
-            values: [[ratesString]]
-        };
-
-        fetch(apiUrl, {
-            method: 'POST',
-            headers: {
-                'Authorization': `Bearer ${accessToken}`,
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(requestData)
-        })
-        .then(response => {
-            if (response.ok) {
-                console.log('Rates submitted successfully');
-            } else {
-                console.error('Failed to submit rates');
-            }
-        })
-        .catch(error => {
-            console.error('Failed to submit rates:', error);
-        });
+        const filename = 'rates.txt';
+        const file = new Blob([ratesString], {type: 'text/plain'});
+        const a = document.createElement('a');
+        a.href = URL.createObjectURL(file);
+        a.download = filename;
+        a.click();
     });
 });
